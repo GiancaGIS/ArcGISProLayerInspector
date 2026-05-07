@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArcGIS defaultAssembly="ArcGISProLayerInspector.dll"
+        defaultNamespace="ArcGISProLayerInspector"
+        xmlns="http://schemas.esri.com/DADF/Registry"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+
+  <AddInInfo id="{eb6891d1-c5bf-477b-945e-683054755cd1}" version="1.0.0" desktopVersion="3.5.57366" product="ArcGISPro">
+    <Name>ArcGIS Pro Layer Inspector</Name>   
+    <Description>A layer inspection tool for ArcGIS Pro</Description>
+    <Image>Images\AddinDesktop32.png</Image>
+    <Author>GiancaGIS</Author>
+    <Company>GiancaGIS</Company>
+    <Date>5/6/2026 4:10:48 PM</Date>
+    <Subject>Framework</Subject>
+  </AddInInfo>
+
+  <modules>
+    <insertModule id="ArcGISProLayerInspector_Module" className="Module1" autoLoad="false" caption="Module1">
+      <tabs>
+        <!--<tab id="ArcGISProLayerInspector_Tab1" caption="New Tab">
+          <group refID="ArcGISProLayerInspector_Group1"/>
+        </tab>-->
+      </tabs>
+
+      <groups>
+        <group id="ArcGISProLayerInspector_Group1" caption="Layer Info" appearsOnAddInTab="true">
+          <button refID="ArcGISProLayerInspector_LayerInfoButton"/>
+        </group>
+      </groups>
+
+      <controls>
+        <button id="ArcGISProLayerInspector_LayerInfoButton" caption="Layer Info" 
+                className="LayerInfoButton" loadOnClick="true"
+                smallImage="Images\AddInDesktop16.png" 
+                largeImage="Images\AddInDesktop32.png">
+          <tooltip heading="Layer Info">Apri il pannello informazioni layer<disabledText/></tooltip>
+        </button>
+      </controls>
+
+      <dockPanes>
+        <dockPane id="ArcGISProLayerInspector_LayerInfoDockPane" caption="Layer Info" 
+                  className="LayerInfoDockPaneViewModel" dock="group"
+                  dockWith="esri_core_projectDockPane">
+          <content className="LayerInfoDockPaneView"/>
+        </dockPane>
+      </dockPanes>
+
+    </insertModule>
+  </modules>
+</ArcGIS>
