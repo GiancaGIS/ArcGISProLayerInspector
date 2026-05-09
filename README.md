@@ -1,4 +1,4 @@
-# TestAddIn – Layer Info for ArcGIS Pro
+# Layer Info for ArcGIS Pro
 
 An ArcGIS Pro Add-In that provides a convenient dockable panel to inspect feature layer properties directly from the active map.
 
